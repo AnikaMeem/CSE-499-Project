@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#dee3e2;
+}
+
+.home_bg{
+    background-color: #fff;
+}
+
+.glow {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+    }
+
+    to {
+      text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  .banner_img{
+      width: 100%;
+      height: 100%;
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+  .colored_text{
+      background: linear-gradient(to right,yellow,red);
+      background-clip: text;
+      display: inline-block;
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: all .3s;
+  }
+  .colored_text:hover{
+    transform: skewX(-15deg)
+  }
+  @media (min-width:768px) {
+    .center_box{
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color:rgb(185, 171, 171);
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+       -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+       -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+  }
+  .login_form{
+    height: 60vh;
+    width: 60%;
+    background-color: #fff;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,5%);
+    margin: 30px;
+  }
+  .login_form form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-95%,-50%);
+    width: 350px;
+  }
+  .login_form form input:not(:last-child){
+    display: block;
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 20px;
+    border: none;
+    transition: all .4s;
+    background: #eae4d9;
+    backface-visibility: hidden;
+  }
+  .login_form form input:not(:last-child):placeholder-shown ~ label{
+    opacity: 0;
+    transform: translate(9px, -53px);
+  }
+
+  .login_form form label{
+    color: #797373;
+    position: absolute;
+    transform: translate(7px, -80px);
+    opacity: 1;
+    transition: all .5s;
+  }
+  .login_form form::-webkit-input-placeholder{
+    color: #797373;
+  }
+  
+  .login_form form input:not(:last-child):focus:valid{
+    border-bottom: 3px solid #0fa00f;
+  }
+  .login_form form input:not(:last-child):focus{
+    outline: none;
+    box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #ff7730;
+  }
+  .contactus__bg{
+    position: absolute;
+    width: 70%;
+    height: 75vh;
+    background: #3FB071;
+    left: 50%;
+    top: 50%;
+    transform: translate(-63%, -50%);
+    clip-path: polygon(30% 0,100% 0,100% 100%);
+  }
+  .contactus__form{
+    width: 550px;
+    height: 415px;
+    display: inline-block;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -52%);
+    padding: 30px;
+    box-shadow: 5px 7px 10px 2px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 5px 7px 10px 2px rgba(0,0,0,0.68);
+    -moz-box-shadow: 5px 7px 10px 2px rgba(0,0,0,0.68);
+  }
+  .image{
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+  }
+  .image img{
+    width: 100%;
+    height: 100%;
+  }
+  .Admin_heading{
+    color: #5f5d5d;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .admin_dash{
+    width: 70%;
+    height: 70vh;
+    margin: 0 auto;
+    background: #d2d2d2;
+  }
+  .admin_box{
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+  }
+  .one h5,.two h5{
+    text-transform: capitalize;
+    position: absolute;
+    top: 10%;
+  }
+  .three h5{
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 10%;
+  }
+  .four h5{
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+  }
+  .admin_box:nth-child(odd){
+    box-shadow: -4px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 4px 5px 0px rgba(0,0,0,0.75);
+  }
+  .one{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-115%, -115%);
+  }
+  .two{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(5%, -115%);
+  }
+  .three{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-115%, 5%);
+  }
+  .four{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(5%, 5%);
+  }
+  .admin_box p{
+    font-size: 65px;
+    color: #4c4949;
+  }
+  .admin_control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 85%;
+    font-size: 30px;
+    color: #b59e9e !important;
+    background: #e2dfdf;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  .admin_circle{
+    background: white;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #848282;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .admin_control:active{
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+  }
+  .doctor-dash-size{
+    width: 100%;
+    height: 100vh;
+  }
+.doctor-img-size{
+  height: 200px;
+  margin-top: 20px;
+}
+.appointment-list{
+  height: 250px;
+  overflow: scroll;
+}
+.vh-100{
+  min-height: 100vh;
+}
+.vw-100{
+  min-width: 100vh;
+}
+.appoinment_form_size{
+  width: 60%;
+  height: 400px !important;
+  margin: 0 auto;
+}
+.form-size{
+  width: 30%;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.form-section{
+  width: 65vh;
+  height: 30vh;
+  background: white;
+  padding: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-90%);
+}
+.result-section{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%);
+}
