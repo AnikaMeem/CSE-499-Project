@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include "hospital/main_navbar.html" %}
+
+
+<div class="text-center">
+        <span class="display-3 glow mt-2"> "We Care about your Sound Health" </span>
+</div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="first-slide" src="../static/images/CAIS.jpg" style="height: 90vh; width:100%;" class="d-block w-100" alt="First slide">
+						<div class="container">
+							<div class="carousel-caption text-left">
+							    <h1>AI is the new electricity</h1>
+								<p>AI is powering personal devices in our homes and offices similarly to electricity. AI will be the next big thing after the electricity that will hugely impact our daily life</p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="second-slide" src="../static/images/AI2021-ARTSTOCKCREATIVE-adobe-cp.jpg" style="height: 90vh; width:100%;" class="d-block w-100" alt="Second slide">
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>Making the Big World for Healthcare Smaller</h1>
+								<p>Still in 2021 many people are not able to get proper healthcare services because of not a wide reach of the doctors and hospitals. Using AI people can have a personal doctor at home.</p>
+								
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="third-slide" src="../static/images/How-Artificial-Intelligence-is-revolutionizing-the-Healthcare-Industry.jpg" style="height:90vh; width:100%;" class="d-block w-100" alt="Third slide">
+						<div class="container">
+							<div class="carousel-caption text-right">
+								<h1>Experience the power of AI in HealthCare</h1>
+								<p>Application of AI in the healthcare can have a major impact on the daily working routine of the Doctors. It can reduce the workload of the doctors immensly.</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+
+
+
+<div class="text-center">
+        <span class="display-3 glow mt-2"> Our Services </span>
+</div>
+
+
+
+<div class="home_bg">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/malaria-is-passed-on-by-the-anopheles-mosquito.jpg' %}" alt="AI"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Malaria</h1>
+                    <p class="banner_text_color">The most common disease in tropical and subtropical countries is malaria. In temperature climates, the disease is still uncommon. Malaria is a disease caused by a malaria parasite which is spread to humans through the infected mosquitos’ bites. Sickness, High fever, shaking chills are the symptoms of malaria affected people.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Skin cancer</h1>
+                    <p class="banner_text_color">Skin cancer develops primarily on external part of body including scalp, face, lips, ears, neck, chest, arms, and hands and legs
+                    which are exposed by the sun. Skin cancer is the abnormal growth of our skin. There are three major kinds of skin cancer-1) basal cell carcinoma, squamous cell carcinoma and melanoma. By avoiding UV radiation skin cancer can be reduced.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/MoreThanMoles.jpg' %}" alt="AI"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/BreastCancer.jpg' %}" alt="AI"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0 ">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Breast Cancer  </h1>
+                    <p class="banner_text_color">Breast cancer is a type of cancer that starts in the breast tissue. A lump in the breast, a change in breast shape, dimpling of the skin, fluid emerging from the nipple, a newly inverted nipple, or a red or scaly patch of skin are all signs of breast cancer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Heart Disease</h1>
+                    <p class="banner_text_color">Variety of cardiovascular problems is caused by heart disease. Several diseases and conditions of those diseases fall under the umbrella of heart disease. Arrhythmia, atherosclerosis, cardiomyopathy, congenital heart defects, coronary artery disease, heart infections are the types of heart disease.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/heart-disease-2003.jpg' %}" alt="AI"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/Diabetes.png' %}" alt="AI"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0 ">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Diabetes  </h1>
+                    <p class="banner_text_color">Diabetes is a condition in which the blood glucose, often known as blood sugar, is abnormally high. Our main source of energy is blood glucose, which comes from the food we eat. Insulin, a hormone produced by the pancreas, aids glucose absorption into cells for use as energy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text">Lung Cancer</h1>
+                    <p class="banner_text_color">Lung cancer is the most common cancer that kills people around the world. Lung cancer is a cancer that starts in the lungs and spreads throughout the body. Our lungs are two spongy organs in your chest that take in oxygen and expel carbon dioxide when you breathe in and out. Symptoms such as chest pain, weight loss, and so on.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/lung cell images.jpg' %}" alt="Lung Cancer"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/pneumonia.jpg' %}" alt="pneumonia"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0 ">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Pneumonia  </h1>
+                    <p class="banner_text_color">Pneumonia is a lung infection in which one or both lungs are infected. Bacteria, viruses, and fungi can all cause it. Pneumonia involves inflammation in the alveoli, which are the air sacs in your lungs. The symptoms are like cough, chest pain that usually worsens when taking a deep breath, known as pleuritic pain, headache, fast heartbeat, nausea and vomiting etc.</p>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="col-md-6 col-12 mt-4 p-0">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text">Brain Tumor</h1>
+                    <p class="banner_text_color">A brain tumor is an abnormal cell growth or mass in the brain. There are various types of brain tumors. Some brain tumors are benign (noncancerous), while others are cancerous (malignant). Primary brain tumors can start in the brain or spread from other parts of the body to the brain, called secondary brain tumors or metastatic.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/braintumor.jpg' %}" alt="braintumor"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0">
+            <img class = "banner_img"src="{% static 'images/corona-virus.jpg' %}" alt="pneumonia"/>
+        </div>
+        <div class="col-md-6 col-12 mt-4 p-0 ">
+            <div class="center_box d-flex align-items-center">
+                <div>
+                    <h1 class="colored_text"> Covid-19  </h1>
+                    <p class="banner_text_color">Coronavirus disease (COVID-19) is a newly found coronavirus that causes an infectious disease. The majority of patients who contract the COVID-19 virus experience a mild to moderate respiratory infection, as well as a fever. When an infected person coughs or sneezes, the COVID-19 virus spreads usually through saliva droplets or nasal secretion.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+   
+{% include 'hospital/footer.html' %}
+
+{% endblock content %}

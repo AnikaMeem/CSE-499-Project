@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Prediction
+{% endblock title %}
+    
+
+{% block content %}
+    <section>
+        <div class="container mt-5">
+            <h1 class="text-success text-center">Disease Prediction</h1>
+        </div>
+        <div class="form-section">
+            <form action="." method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <select name="disease" id="disease" class="p-1 w-100 text-success">
+                        <option value="one" class="text-secondary">Select One</option>
+                        {% for disease in diseases  %}
+                            <option value="{{disease.id}}">{{disease.diseaseName}}</option>
+                        {% endfor %}
+                            
+                      </select>
+                  </div>
+                <div class="form-group">
+                  <input enctype="multipart/form-data" class="form-control-file" type="file" name="imagePath">
+                </div>
+                <button type="submit" value="submit" name="submit" class="btn btn-outline-success">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <div class="result-section bg-light p-3">
+            
+            {% if result %}
+                <h5 class="text-warning">Our system {{percent}} % sure that patient has the selected disease</h5>
+            {% else %}
+                <h5 class="text-success">Our system {{safe}} % sure that patient is safe</h5>
+            {% endif %}
+            
+        </div>
+        <div class="text-center">
+            <a href="{% url 'homepage' %} " class="btn btn-outline-success">Back To Home</a>
+        </div>
+    </section>
+{% endblock content %}
+    

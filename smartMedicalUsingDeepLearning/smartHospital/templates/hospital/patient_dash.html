@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Patient Dashboard
+{% endblock title %}
+
+
+{% block content %}
+<section>
+    <div class="row doctor-dash-size">
+        <div class="col-3 bg-warning">
+            <div class="text-center">
+                <img class="doctor-img-size" src="{% static 'images/patient.png' %}" />
+            </div>
+
+            <div class="text-white mt-5 pl-2">
+                <h4 class="p-2">Name: {{patient.first_name}} {{patient.last_name}}</h4>
+                <h5 class="mt-1 p-2">Email: {{patient.email}}</h5>
+                <a href="{% url 'diseasePrediction' %}" class="ml-2 btn btn-outline-primary text-capitalize">disease
+                    prediction</a>
+                <form class="ml-2" method="POST" action=".">
+                    {% csrf_token %}
+                    <input type="hidden" name="logout" value="logout" />
+                    <button class="btn mt-3 btn-outline-danger">Log Out</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-9 bg-light d-flex flex-column justify-content-center align-items-center">
+
+            {% if appointmentCount %}
+            <h1 class="text-center text-secondary">You did not make an appointment</h1>
+            {% else %}
+            <h1 class="text-center text-success">Appointment Status</h1>
+            
+            <ol class="list-group">
+                {% for appointment,doc in appointments %}
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-4">
+                                {{doc}}
+                            </div>
+                            <div class="col-4">
+                                <span class="">{{appointment.date}}</span>
+                            </div>
+                            {% if appointment.approved %}
+                                <div class="col-4">
+                                    <span class="bg-success">Approved</span>
+                                </div>
+                            {% else %}
+                            <div class="col-4">
+                                <p class="bg-warning">Waiting</p>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                    </li>
+                    
+                </ol>    
+            
+            {% endfor %}
+            {% endif %}
+
+            <a href="{% url 'appointment' %}" class="mt-2 btn btn-outline-secondary text-capitalize"> Make an
+                appointment </a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Admin Bashboard
+{% endblock title %}
+
+
+{% block content %}
+
+    <h1 class="Admin_heading">Admin</h1>
+    <div class="admin_dash">
+        <div class="admin_box one">
+            <h5>Doctor</h5>
+            <p>0</p>
+        </div>
+        <div class="admin_box two">
+            <h5>patient</h5>
+            <p>0</p>
+        </div>
+        <div class="admin_box three">
+            <h5>Admin</h5>
+            <p>0</p>
+        </div>
+        <div class="admin_box four">
+            <h5>Total Appoinment</h5>
+            <p>0</p>
+        </div>
+        <div class="admin_circle">
+            <a href="/admin" class="admin_control">Admin</a>
+        </div>
+    </div>
+{% endblock content %}
+    
+    

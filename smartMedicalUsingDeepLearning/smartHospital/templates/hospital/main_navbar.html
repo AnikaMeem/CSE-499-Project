@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0cb071;">
+  <a class="navbar-brand" href="#">AI Hospital</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="admin/">Admin</a>
+          <a class="dropdown-item" href="{% url 'doctorlogin' %}">Doctor</a>
+          <a class="dropdown-item" href="{% url 'patientlogin' %}">Patient</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Signin 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="{% url 'doctorSignin' %}">Doctor</a>
+          <a class="dropdown-item" href="{% url 'patientSignin' %}">Patient</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+

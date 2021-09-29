@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block title %}
+Doctor Dashboard
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="bg-light doctor-dash-size">
+    <div class="row doctor-dash-size">
+        <div class="col-3 bg-success">
+            <div class="text-center">
+                <img class="doctor-img-size" src="{% static 'images/doctor.png' %}" />
+            </div>
+
+            <div class="text-white mt-5 pl-2">
+                <h4 class="p-2">Name: {{ doctor.first_name }} {{ doctor.last_name }}</h4>
+                <h5 class="mt-1 p-2 text-capitalize">Hospital: {{doctor.hospital}}</h5>
+                <h5 class="mt-1 p-2">Email:{{doctor.email}}</h5>
+                <a href="{% url 'diseasePrediction' %}" class="ml-2 btn btn-outline-warning text-capitalize">disease
+                    prediction</a>
+                <form class="ml-2" method="POST" action=".">
+                    {% csrf_token %}
+                    <input type="hidden" name="logout" value="logout" />
+                    <button class="btn mt-3 btn-outline-danger">Log Out</button>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-9 bg-light">
+            <div class="appointment-list mt-3 overflow-auto">
+                {% if hasAppointment %}
+                <div class="heading mt-2">
+                    <h1 class="text-center text-capitalize text-warning"> appointments </h1>
+                </div>
+                {% else %}
+                <div class="heading mt-2">
+                    <h1 class="text-center text-secondary">You have no appointment</h1>
+                </div>
+                {% endif %}
+                    <ol class="list-group">
+                        
+                        {% for item,patient in appointments %}
+                        {% if item.approved %}
+                        <li class="list-group-item">
+
+                        <form method="POST" action=".">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-10">
+                                    {{patient}}
+                                </div>
+                                <div class="col-2">
+                                    <input type="hidden" name="ID" value="{{item.id}}"/>
+                                    <button type="submit" name="complete" class="btn btn-success">Complete</button>
+                                </div>
+                            </div>
+                            </form>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                            
+                       
+                    </ol>
+            </div>
+
+            <div class="heading mt-2">
+                <h1 class="text-center text-capitalize text-warning"> appointment request </h1>
+            </div>
+            <div class="appointment-list mt-3 overflow-auto">
+                
+                <ol class="list-group">
+                        
+                    {% for item,patient in appointments2 %}
+                    {% if item.approved %}
+                    {% else %}
+                    <li class="list-group-item">
+
+                    <form method="POST" action=".">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-3">
+                                {{patient}}
+                            </div>
+                            <div class="col-3">
+                                {{item.date}}
+                            </div>
+                            <div class="col-6">
+                                <input type="hidden" name="ID" value="{{item.id}}"/>
+                                <button type="submit" name="accept" value="accept" class="ml-5 btn btn-outline-success">Accept</button>
+                                <button type="submit" name="reject" value="reject" class="ml-5 btn btn-outline-warning">Reject</button>
+                            </div>
+                        </div>
+                        </form>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ol>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

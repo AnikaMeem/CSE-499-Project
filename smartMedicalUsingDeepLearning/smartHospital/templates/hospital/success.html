@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Success
+{% endblock title %}
+    
+
+{% block content %}
+    <section class="d-flex flex-column vh-100 justify-content-center align-items-center">
+        <h1 class="text-success text-capitalize"> Sign in successful </h1>
+        <a href="{% url 'homepage' %}" class="btn btn-outline-warning text-uppercase mb-3">go back home</a>
+    </section>
+{% endblock content %}
+    
